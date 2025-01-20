@@ -1,5 +1,5 @@
 const PracticeComponent = () => {
-  return <div></div>;
+  return <div>x</div>;
 };
 
 export default PracticeComponent;

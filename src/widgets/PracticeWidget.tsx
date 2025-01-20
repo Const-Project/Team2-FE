@@ -1,5 +1,5 @@
 const PracticeWidget = () => {
-  return <div></div>;
+  return <div>x</div>;
 };
 
 export default PracticeWidget;
