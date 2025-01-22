@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: white;
+  color: white;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vh 5vw;
+  background-color: white;
+  border-bottom: 0.5vh solid grey;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  white-space: nowrap; /* 강제 줄바꿈 방지 */
+}
+
+.login-button {
+  padding: 0.8vh 2vw;
+  margin-left: 10%;
+  background-color: #5f4f46;
+  color: white;
+  border: none;
+  border-radius: 0.5vh;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #524f46;
+}

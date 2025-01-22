@@ -1,0 +1,30 @@
+.navbar {
+display: flex;
+gap: 10vw;
+}
+
+.nav-button {
+background: none;
+border: none;
+font-size: 1rem;
+color: #5f4f46;
+cursor: pointer;
+padding: 0.5vh 1vw;
+border-bottom: 0.4vh solid transparent; /* 두께를 0.4vh로 설정 */
+transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-button:hover {
+color: #5f4f46;
+border-bottom: 0.4vh solid #5f4f46; /* 호버 시 직선 표시 */
+}
+
+.nav-button.active {
+color: #5f4f46;
+border-bottom: 0.4vh solid #5f4f46; /* 활성화 상태도 직선 */
+text-decoration: none;
+}
+
+.nav-button::after {
+content: none; /* 곡선 효과 원인 제거 */
+}
