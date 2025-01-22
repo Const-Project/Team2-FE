@@ -19,7 +19,7 @@ const BlackButton: React.FC<InputComponentProps> = ({
 }: {
   inputName: string;
 }) => {
-  return <BUTTON>소동환 바보</BUTTON>;
+  return <BUTTON>GET STARTED</BUTTON>;
 };
 
 export default BlackButton;

@@ -1,10 +1,16 @@
 import styled from "@emotion/styled";
 import FormEntity from "./FormEntity";
+
+interface InputComponentProps {
+  smallLetter: string;
+  largeLetter: string;
+}
+
 const Wrapper = styled.div`
   display: flex;
   padding-left: 25.5px;
   flex-direction: column;
-  width: 520px;
+  width: 460px;
   height: 520px;
   border-radius: 8px;
   border: 1px solid black;
@@ -60,12 +66,18 @@ const FormWrapper = styled.div`
   margin-top: 45px;
 `;
 
-const AcountContainer = () => {
+const AcountContainer: React.FC<InputComponentProps> = ({
+  smallLetter,
+  largeLetter,
+}: {
+  smallLetter: string;
+  largeLetter: string;
+}) => {
   return (
     <Wrapper>
       <LetterWrapper>
-        <div className="small">Simple way to order your coffee</div>
-        <div className="big">Log In to Const Future</div>
+        <div className="small">{smallLetter}</div>
+        <div className="big">{largeLetter}</div>
       </LetterWrapper>
       <FormWrapper>
         <FormEntity />

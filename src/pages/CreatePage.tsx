@@ -27,7 +27,8 @@ const LayOut = styled.div`
   background-color: #5f4f46;
   margin: 0 auto; /* 가로 여백 자동으로 설정 */
 `;
-const LoginPage: React.FC = () => {
+
+const CreatePage: React.FC = () => {
   return (
     <LayOut>
       <LoginHeader />
@@ -35,8 +36,8 @@ const LoginPage: React.FC = () => {
         <LogoAndLetters />
         <span>
           <AcountContainer
-            smallLetter="Simple way to order your coffee"
-            largeLetter="Log In to Const Future"
+            smallLetter="LET'S GET YOU STARTED"
+            largeLetter="Create an Account"
           />
         </span>
       </Wrapper>
@@ -44,4 +45,4 @@ const LoginPage: React.FC = () => {
   );
 };
 
-export default LoginPage;
+export default CreatePage;
