@@ -1,6 +1,6 @@
 .navbar {
 display: flex;
-gap: 10vw;
+gap: 5vw;
 }
 
 .nav-button {
@@ -9,7 +9,7 @@ border: none;
 font-size: 1rem;
 color: #5f4f46;
 cursor: pointer;
-padding: 0.5vh 1vw;
+padding: 1vh 2vw;
 border-bottom: 0.4vh solid transparent; /* 두께를 0.4vh로 설정 */
 transition: color 0.3s, border-bottom 0.3s;
 }
