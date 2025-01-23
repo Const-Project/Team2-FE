@@ -1,0 +1,23 @@
+.add-menu-form {
+display: flex;
+flex-direction: column;
+margin: 20px;
+}
+
+.add-menu-form input {
+margin-bottom: 10px;
+padding: 8px;
+font-size: 14px;
+}
+
+.add-menu-form button {
+padding: 8px;
+background-color: #6b4f4f;
+color: white;
+border: none;
+cursor: pointer;
+}
+
+.add-menu-form button:hover {
+background-color: #5a3f3f;
+}

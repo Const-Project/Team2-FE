@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: white;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5vh 2vw;
+  background-color: white;
+  border-bottom: 0.5vh solid grey;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  white-space: nowrap; /* 강제 줄바꿈 방지 */
+}
+
+.login-button {
+  padding: 0.8vh 2vw;
+  background-color: #5f4f46;
+  color: white;
+  border: none;
+  border-radius: 0.5vh;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #524f46;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5%;
+  padding: 5% 5%;
+  height: 100%;
+}
+
+.menu-item {
+  background-color: #5f4f46;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.menu h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2vh;
+  color: white;
+}
+
+.menu p {
+  color: #bbb;
+  font-size: 1rem;
 }
