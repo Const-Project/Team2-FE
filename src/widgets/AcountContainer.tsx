@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import FormEntity from "./FormEntity";
-
+import {useNavigate} from "react-router-dom";
 interface InputComponentProps {
   smallLetter: string;
   largeLetter: string;
@@ -73,6 +73,10 @@ const AcountContainer: React.FC<InputComponentProps> = ({
   smallLetter: string;
   largeLetter: string;
 }) => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/ForgotPage");
+  };
   return (
     <Wrapper>
       <LetterWrapper>
@@ -82,7 +86,9 @@ const AcountContainer: React.FC<InputComponentProps> = ({
       <FormWrapper>
         <FormEntity />
       </FormWrapper>
-      <button className="Button">Forgot Password</button>
+      <button className="Button" onClick={handleClick}>
+        Forgot Password
+      </button>
       <label className="checkBox">
         <input type="checkbox" />
         <span>Remember Me </span>

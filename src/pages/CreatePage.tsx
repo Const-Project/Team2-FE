@@ -2,6 +2,27 @@ import styled from "@emotion/styled";
 import LogoAndLetters from "../widgets/LogoAndLetter";
 import AcountContainer from "../widgets/AcountContainer";
 import LoginHeader from "../widgets/LoginHeader";
+import {keyframes} from "@emotion/react";
+interface AnimatedContainerProps {
+  delay?: string;
+}
+
+const fadeIn = keyframes`
+  from {
+    opacity:0;
+    transform: translateX(-50px);
+  }
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+`;
+
+const AnimatedContainer = styled.div<AnimatedContainerProps>`
+  opacity: 0;
+  animation: ${fadeIn} 1s ease-in-out forwards;
+  animation-delay: ${(props) => props.delay || "0s"};
+`;
 
 const Wrapper = styled.div`
   display: flex;
@@ -33,12 +54,16 @@ const CreatePage: React.FC = () => {
     <LayOut>
       <LoginHeader />
       <Wrapper>
-        <LogoAndLetters />
+        <AnimatedContainer delay="0.5s">
+          <LogoAndLetters />
+        </AnimatedContainer>
         <span>
-          <AcountContainer
-            smallLetter="LET'S GET YOU STARTED"
-            largeLetter="Create an Account"
-          />
+          <AnimatedContainer delay="0.5s">
+            <AcountContainer
+              smallLetter="LET'S GET YOU STARTED"
+              largeLetter="Create an Account"
+            />
+          </AnimatedContainer>
         </span>
       </Wrapper>
     </LayOut>

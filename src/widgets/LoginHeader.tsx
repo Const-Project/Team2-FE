@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-
+import {useNavigate} from "react-router-dom";
 const Wrapper = styled.div`
   width: 100%;
   display: flex;
@@ -28,16 +28,28 @@ const SignUp = styled.button`
   color: white;
   padding: 12px 40px;
   margin-right: 83px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: white;
+    color: #5f4f46;
+    border-color: #5f4f46;
+    transition: all 0.3s ease;
+  }
 `;
 
 const LoginHeader = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/CreatePage");
+  };
   return (
     <Wrapper>
       <LogoWrapper>
         <LOGO src="CPLogo.png"></LOGO>
         <span>Const Future</span>
       </LogoWrapper>
-      <SignUp>Sign UP</SignUp>
+      <SignUp onClick={handleClick}>Sign UP</SignUp>
     </Wrapper>
   );
 };

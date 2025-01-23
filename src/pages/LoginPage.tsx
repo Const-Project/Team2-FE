@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import LogoAndLetters from "../widgets/LogoAndLetter";
 import AcountContainer from "../widgets/AcountContainer";
 import LoginHeader from "../widgets/LoginHeader";
-
+import {keyframes} from "@emotion/react";
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -16,6 +16,27 @@ const Wrapper = styled.div`
   }
 `;
 
+interface AnimatedContainerProps {
+  delay?: string;
+}
+
+const fadeIn = keyframes`
+  from {
+    opacity:0;
+    transform: translateX(-50px);
+  }
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+`;
+
+const AnimatedContainer = styled.div<AnimatedContainerProps>`
+  opacity: 0;
+  animation: ${fadeIn} 1s ease-in-out forwards;
+  animation-delay: ${(props) => props.delay || "0s"};
+`;
+
 const LayOut = styled.div`
   max-width: 1440px; /* 최대 너비 설정 */
   width: 100%; /* 부모 너비에 맞춤 */
@@ -27,17 +48,22 @@ const LayOut = styled.div`
   background-color: #5f4f46;
   margin: 0 auto; /* 가로 여백 자동으로 설정 */
 `;
+
 const LoginPage: React.FC = () => {
   return (
     <LayOut>
       <LoginHeader />
       <Wrapper>
-        <LogoAndLetters />
+        <AnimatedContainer delay="0.5s">
+          <LogoAndLetters />
+        </AnimatedContainer>
         <span>
-          <AcountContainer
-            smallLetter="Simple way to order your coffee"
-            largeLetter="Log In to Const Future"
-          />
+          <AnimatedContainer delay="0.5s">
+            <AcountContainer
+              smallLetter="Simple way to order your coffee"
+              largeLetter="Log In to Const Future"
+            />
+          </AnimatedContainer>
         </span>
       </Wrapper>
     </LayOut>
