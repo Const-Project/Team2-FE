@@ -1,6 +1,7 @@
 html,
 body {
   background-color: #5f4f46;
+  max-width: 1440px;
   height: 100%;
   margin: 0;
   padding: 0;
