@@ -1,17 +1,11 @@
 import React from "react";
 import "./Menu.css";
+import { MenuProps } from "../components/Types";
 
-// ✅ Drink 타입을 인터페이스로 정의
-interface Drink {
-    name: string;
-    price: string;
-    alt: string;
-}
-
-// ✅ MenuProps 인터페이스 추가
-interface MenuProps {
-    drinks: Drink[];
-}
+// // ✅ MenuProps 인터페이스 추가
+// interface MenuProps {
+//     drinks: Drink[];
+// }
 
 const Menu: React.FC<MenuProps> = ({ drinks }) => {
     return (

@@ -12,7 +12,7 @@ interface Drink {
 
 const MainPage = () => {
     const [activeMenu, setActiveMenu] = useState("home");
-    const menuItems = ["home", "menu", "temporary"];
+    const menuItems = ["Home", "Menu", "About", "Temporary"];
 
     // ✅ 음료 데이터 추가
     const [drinks, setDrinks] = useState<Drink[]>([

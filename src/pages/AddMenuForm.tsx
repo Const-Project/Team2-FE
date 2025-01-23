@@ -1,17 +1,6 @@
 // AddMenuForm.tsx
 import React, { useState } from "react";
-
-// Drink 타입 정의
-interface Drink {
-    name: string;
-    price: string;
-    alt: string;
-}
-
-// AddMenuForm의 props 타입 정의
-interface AddMenuFormProps {
-    addDrink: (newDrink: Drink) => void;
-}
+import { AddMenuFormProps, Drink } from "../components/Types";
 
 const AddMenuForm: React.FC<AddMenuFormProps> = ({ addDrink }) => {
     const [name, setName] = useState<string>("");
@@ -32,31 +21,14 @@ const AddMenuForm: React.FC<AddMenuFormProps> = ({ addDrink }) => {
     };
 
     return (
-    <form onSubmit={handleSubmit} className="add-menu-form">
-        <input
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        placeholder="음료 이름"
-        required
-        />
-        <input
-        type="text"
-        value={price}
-        onChange={(e) => setPrice(e.target.value)}
-        placeholder="가격"
-        required
-        />
-        <input
-        type="text"
-        value={alt}
-        onChange={(e) => setAlt(e.target.value)}
-        placeholder="설명"
-        required
-        />
-        <button type="submit">추가</button>
-    </form>
+        <form onSubmit={handleSubmit}>
+            <input value={name} onChange={(e) => setName(e.target.value)} placeholder="이름" />
+            <input value={price} onChange={(e) => setPrice(e.target.value)} placeholder="가격" />
+            <input value={alt} onChange={(e) => setAlt(e.target.value)} placeholder="설명" />
+            <button type="submit">추가</button>
+        </form>
     );
 };
+    
 
 export default AddMenuForm;
