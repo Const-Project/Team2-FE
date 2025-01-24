@@ -4,6 +4,7 @@ import {useNavigate} from "react-router-dom";
 interface InputComponentProps {
   smallLetter: string;
   largeLetter: string;
+  isLoginPage: boolean;
 }
 
 const Wrapper = styled.div`
@@ -11,7 +12,7 @@ const Wrapper = styled.div`
   padding-left: 25.5px;
   flex-direction: column;
   width: 460px;
-  height: 520px;
+  height: 470px;
   border-radius: 8px;
   border: 1px solid black;
   background-color: white;
@@ -69,9 +70,11 @@ const FormWrapper = styled.div`
 const AcountContainer: React.FC<InputComponentProps> = ({
   smallLetter,
   largeLetter,
+  isLoginPage,
 }: {
   smallLetter: string;
   largeLetter: string;
+  isLoginPage: boolean;
 }) => {
   const navigate = useNavigate();
   const handleClick = () => {
@@ -86,13 +89,18 @@ const AcountContainer: React.FC<InputComponentProps> = ({
       <FormWrapper>
         <FormEntity />
       </FormWrapper>
-      <button className="Button" onClick={handleClick}>
-        Forgot Password
-      </button>
-      <label className="checkBox">
-        <input type="checkbox" />
-        <span>Remember Me </span>
-      </label>
+      {isLoginPage && (
+        <>
+          <button className="Button" onClick={handleClick}>
+            Forgot Password
+          </button>
+
+          <label className="checkBox">
+            <input type="checkbox" />
+            <span>Remember Me </span>
+          </label>
+        </>
+      )}
     </Wrapper>
   );
 };

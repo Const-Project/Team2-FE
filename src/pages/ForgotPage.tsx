@@ -60,6 +60,7 @@ const ForgotPage = () => {
             <AcountContainer
               largeLetter="Forgot Password?"
               smallLetter="Quick & Simple way to find your password"
+              isLoginPage={false}
             />
           </ContentWrapper>
         </AnimatedContainer>

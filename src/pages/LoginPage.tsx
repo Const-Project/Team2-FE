@@ -62,6 +62,7 @@ const LoginPage: React.FC = () => {
             <AcountContainer
               smallLetter="Simple way to order your coffee"
               largeLetter="Log In to Const Future"
+              isLoginPage={true}
             />
           </AnimatedContainer>
         </span>

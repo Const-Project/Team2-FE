@@ -62,6 +62,7 @@ const CreatePage: React.FC = () => {
             <AcountContainer
               smallLetter="LET'S GET YOU STARTED"
               largeLetter="Create an Account"
+              isLoginPage={false}
             />
           </AnimatedContainer>
         </span>
